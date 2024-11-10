@@ -2,6 +2,10 @@ import unittest
 from math_quiz import function_A, function_B, function_C
 
 
+import unittest
+from math_quiz import function_A, function_B, function_C
+
+
 class TestMathGame(unittest.TestCase):
 
     def test_function_random_integer_between(self):
@@ -23,7 +27,7 @@ class TestMathGame(unittest.TestCase):
 
     def test_function_Calculate(self):
         #test cases to be checked
-            test_cases = [
+        test_cases = [
                 (5, 2, '+', '5 + 2', 7),
                 (8, 3, '-', '8 - 3', 5),
                 (4, 6, '*', '4 * 6', 24),
@@ -36,12 +40,11 @@ class TestMathGame(unittest.TestCase):
             ]
         #Call the function for the number of test cases and compare 
         #the calculated expression and answer to the test cases
-        
-            for num1, num2, operator, expected_problem, expected_answer in test_cases:
+        for num1, num2, operator, expected_problem, expected_answer in test_cases:
 
-                problem, answer = function_Calculate(num1, num2, operator)
-                self.assertEqual(problem, expected_problem)
-                self.assertEqual(answer, expected_answer)
+            problem, answer = function_Calculate(num1, num2, operator)
+            self.assertEqual(problem, expected_problem)
+            self.assertEqual(answer, expected_answer)
 
 if __name__ == "__main__":
     unittest.main()
